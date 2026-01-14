@@ -785,7 +785,7 @@
                                 <i class="fas fa-map-marker-alt"></i> 福井県福井市大和田周辺
                             </div>
                             <p class="property-desc">
-                                大型商業施設エルパを中心とする商業集積エリア内に立つ、好立地の清湯マンション。生活の利便性、大学病院、テレビ局や新聞社等主要な勤務先へのアクセスも良好。
+                                大型商業施設エルパを中心とする商業集積エリア内に立つ、好立地の賃貸マンション。生活の利便性、大学病院、テレビ局や新聞社等主要な勤務先へのアクセスも良好。
                             </p>
                             <div class="map-embed" style="margin-top:15px">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d677.7445338422446!2d136.24697347146576!3d36.095572508274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8bfd6f554d531%3A0xd175bc804be34430!2z44CSOTEwLTA4Mzcg56aP5LqV55yM56aP5LqV5biC6auY5p-z77yS5LiB55uu77yR77yX77yQ77yT!5e0!3m2!1sja!2sjp!4v1768109947027!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -859,32 +859,35 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-wrapper fade-in-section">
-                    <p class="contact-intro">
-                        物件のご紹介、その他ご相談はお気軽にどうぞ。<br>2営業日以内に返信いたします。
-                    </p>
+              <!-- CONTACT SECTION WITH FORMSPREE -->
+        <section id="contact" class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-form-container">
+                <!-- 
+                  重要: actionのURLの末尾にあなたのFormspree IDを入れてください 
+                  例: https://formspree.io/f/YOUR_ID
+                -->
+                <form action="https://formspree.io/f/mykkzyad" method="POST">
+                    <label>お名前</label>
+                    <input type="text" name="name" placeholder="山田 太郎" required>
                     
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('送信デモ：実際には送信されません。');">
-                        <div class="form-group">
-                            <label for="name">お名前</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="山田 太郎" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">メールアドレス</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="info@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">お問い合わせ内容</label>
-                            <textarea id="message" name="message" class="form-control" placeholder="ご質問やご相談内容をご記入ください" required></textarea>
-                        </div>
-                        <div style="text-align: center; margin-top: 10px;">
-                            <button type="submit" class="btn btn-primary">送信する</button>
-                        </div>
-                    </form>
+                    <label>メールアドレス</label>
+                    <input type="email" name="_replyto" placeholder="example@mail.com" required>
+                    
+                    <label>お問い合わせ内容</label>
+                    <textarea name="message" placeholder="ご相談内容をご記入ください" rows="5" required></textarea>
+                    
+                    <!-- 送信後のリダイレクト先（任意） -->
+                    <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html"> -->
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">メールを送信する</button>
+                </form>
+                <p style="font-size: 0.8rem; color: #777; margin-top: 15px; text-align: center;">
+                    ※送信ボタンを押すと確認画面が表示されます。
+                </p>
+            </div>
+        </section>
+    </main
 
                     <div class="social-links">
                         <a href="#" class="social-btn" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
